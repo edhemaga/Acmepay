@@ -1,0 +1,144 @@
+<div id="wrapper">
+    <div id="container">
+        <div>
+            <form [formGroup]="statusSelectForm">
+                <mat-form-field>
+                    <mat-label>Status</mat-label>
+                    <select (change)="selectStatus()" matNativeControl required formControlName="status">
+                        <option value="{{status}}" *ngFor="let status of filterStatus">{{status}}</option>
+                    </select>
+                </mat-form-field>
+            </form>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter a date range</mat-label>
+                <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                    <input matStartDate formControlName="start" placeholder="Start date">
+                    <input matEndDate formControlName="end" placeholder="End date">
+                </mat-date-range-input>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+
+                <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date
+                </mat-error>
+                <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+            </mat-form-field>
+            <button id="filterButton" (click)="filterByDate()" mat-raised-button color="primary">Filter by date</button>
+
+            <ngx-datatable id="itemTable" class="dark align" [rows]="payments" [headerHeight]="50" columnMode="force"
+                [messages]="{emptyMessage: 'No data!'}" scrollbarH="true" virtualization="true" swapColumns="true"
+                footerHeight="auto" [limit]="pageSize" rowHeight="auto" [offset]="pageNumber" [externalPaging]="true"
+                [count]="pageCount">
+                <ngx-datatable-column prop="paymentId" name="Payment ID">
+                    <ng-template let-column="column" ngx-datatable-header-template> {{column.name}} </ng-template>
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span>
+                            <p>
+                                {{ value }}
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column prop="cardholder_Number" name="Cardholder number">
+                    <ng-template let-column="column" ngx-datatable-header-template> {{column.name}} </ng-template>
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span>
+                            <p>
+                                {{ value }}
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column prop="currency" name="Currency">
+                    <ng-template let-column="column" ngx-datatable-header-template> {{column.name}} </ng-template>
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span>
+                            <p>
+                                {{ value }}
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column prop="holderName" name="Holder name">
+                    <ng-template let-column="column" ngx-datatable-header-template> {{column.name}} </ng-template>
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span>
+                            <p>
+                                {{ value }}
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column prop="orderReference" name="Order reference">
+                    <ng-template let-column="column" ngx-datatable-header-template> {{column.name}} </ng-template>
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span>
+                            <p>
+                                {{ value }}
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column prop="status" name="Status">
+                    <ng-template let-column="column" ngx-datatable-header-template> {{column.name}} </ng-template>
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span>
+                            <p>
+                                {{ value }}
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column [sortable]="false" name="Capture payment">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span id="capture" class="alignTextCenter" (click)="capturePayment(row.paymentId)">
+                            <p>
+                                <mat-icon>check_box</mat-icon>
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column [sortable]="false" name="Void payment">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                        <span id="void" class="alignTextCenter" (click)="voidPayment(row.paymentId)">
+                            <p>
+                                <mat-icon>clear</mat-icon>
+                            </p>
+                        </span>
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-footer>
+                    <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-curPage="curPage">
+                        <div style="padding: 5px 10px">
+                            <span>
+                                Total: {{rowCount}}
+                            </span>
+                            <hr style="width:100%" />
+                            <span>
+                                Page: {{curPage}}
+                            </span>
+                            <div>
+                                <span>
+                                    Payments per page:
+                                </span>
+                                <select (change)="getPageSize(pageLimit.value)" #pageLimit name="pageLimit"
+                                    id="pageLimit">
+                                    <option value="2">2</option>
+                                    <option value="5">5</option>
+                                    <option selected value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <datatable-pager [pagerLeftArrowIcon]="'datatable-icon-left'"
+                            [pagerRightArrowIcon]="'datatable-icon-right'" [pagerPreviousIcon]="'datatable-icon-prev'"
+                            [pagerNextIcon]="'datatable-icon-skip'" [page]="pageNumber" [size]="pageSize"
+                            [count]="pageCount" [hidden]="!((pageCount / pageSize) > 1)" (change)="setPage($event)">
+                        </datatable-pager>
+                    </ng-template>
+                </ngx-datatable-footer>
+            </ngx-datatable>
+        </div>
+    </div>
+</div>

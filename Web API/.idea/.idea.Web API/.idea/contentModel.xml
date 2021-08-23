@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\USER\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\USER\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Web API.394974084.00" t="ExcludeRecursive" />
+    <e p="D:\Projekti\acmepay ltd\Web API" t="IncludeFlat">
+      <e p="Acmepay.Application" t="IncludeRecursive">
+        <e p="Acmepay.Application.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DTOs" t="Include">
+          <e p="Authorize" t="Include" />
+          <e p="Capture" t="Include">
+            <e p="CaptureRequestDTO.cs" t="Include" />
+          </e>
+          <e p="CardHolder" t="Include">
+            <e p="CardHolderDTO.cs" t="Include" />
+          </e>
+          <e p="PagingParams.cs" t="Include" />
+          <e p="PagingWithDate.cs" t="Include" />
+          <e p="Payment" t="Include">
+            <e p="PaymentDTO.cs" t="Include" />
+            <e p="PaymentRequestDTO.cs" t="Include" />
+            <e p="PaymentResponseDTO.cs" t="Include" />
+          </e>
+          <e p="Void" t="Include">
+            <e p="VoidRequestDTO.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Interfaces" t="Include">
+          <e p="GenericRepository" t="Include">
+            <e p="IGenericRepository.cs" t="Include" />
+          </e>
+          <e p="NonGenericRepository" t="Include">
+            <e p="ICardHolder" t="Include">
+              <e p="ICardHolderService.cs" t="Include" />
+            </e>
+            <e p="IPayment" t="Include">
+              <e p="IPaymentService.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Acmepay.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Acmepay.Domain" t="IncludeRecursive">
+        <e p="Acmepay.Domain.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Entities" t="Include">
+          <e p="CardHolder.cs" t="Include" />
+          <e p="Payment.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Acmepay.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Acmepay.Infrastructure" t="IncludeRecursive">
+        <e p="Acmepay.Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20210821135927_init.cs" t="Include" />
+          <e p="20210821135927_init.Designer.cs" t="Include" />
+          <e p="20210822081101_init_v2.cs" t="Include" />
+          <e p="20210822081101_init_v2.Designer.cs" t="Include" />
+          <e p="20210822172305_init_v3.cs" t="Include" />
+          <e p="20210822172305_init_v3.Designer.cs" t="Include" />
+          <e p="DatabaseContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Acmepay.Infrastructure.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Persistance" t="Include">
+          <e p="Context" t="Include">
+            <e p="DatabaseContext.cs" t="Include" />
+          </e>
+          <e p="Repository" t="Include">
+            <e p="GenericRepository.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Shared" t="Include">
+          <e p="CardHolderService" t="Include">
+            <e p="CardHolderService.cs" t="Include" />
+          </e>
+          <e p="PaymetService" t="Include">
+            <e p="PaymentService.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Web API" t="IncludeRecursive">
+        <e p="Acmepay.Presentation.csproj" t="IncludeRecursive" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="CardHolderController.cs" t="Include" />
+          <e p="PaymentController.cs" t="Include" />
+          <e p="PaymentHandlingController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net5.0" t="Include">
+              <e p="Acmepay.Presentation.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="Web API.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

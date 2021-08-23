@@ -1,0 +1,16 @@
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+}
+
+form {
+  width: 40vw;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+}

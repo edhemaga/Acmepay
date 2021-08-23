@@ -1,0 +1,12 @@
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\bin\Debug\netcoreapp3.1\Acmepay.Domain.deps.json
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\bin\Debug\netcoreapp3.1\Acmepay.Domain.dll
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\bin\Debug\netcoreapp3.1\Acmepay.Domain.pdb
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.csprojAssemblyReference.cache
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.AssemblyInfoInputs.cache
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.AssemblyInfo.cs
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.csproj.CoreCompileInputs.cache
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.dll
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.pdb
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\bin\Debug\netcoreapp3.1\Acmepay.Domain.runtimeconfig.json
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\bin\Debug\netcoreapp3.1\Acmepay.Domain.runtimeconfig.dev.json
+D:\Projekti\acmepay ltd\Web API\Acmepay.Domain\obj\Debug\netcoreapp3.1\Acmepay.Domain.genruntimeconfig.cache

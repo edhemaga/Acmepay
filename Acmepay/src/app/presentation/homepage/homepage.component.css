@@ -1,0 +1,15 @@
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#container {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.optionButton {
+  margin: 10px;
+}

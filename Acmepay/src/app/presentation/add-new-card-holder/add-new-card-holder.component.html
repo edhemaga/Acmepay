@@ -1,0 +1,43 @@
+<div id="wrapper">
+    <main>
+        <h2>Add new cardholder</h2>
+        <form [formGroup]="addCardHolder" (ngSubmit)="addNewCardHolder()">
+            <div>
+                <mat-form-field>
+                    <mat-label>Cardholder number</mat-label>
+                    <input matInput placeholder="Enter card number" value="" formControlName="cardholderNumber">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Cardholder name</mat-label>
+                    <input matInput placeholder="Enter name" value="" formControlName="holderName">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Expiration month</mat-label>
+                    <input matInput placeholder="Enter expiration month" value="" formControlName="expirationMonth"
+                        type="number" max="12" min="0">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>Expiration year</mat-label>
+                    <input matInput placeholder="Enter expiration year" value="" formControlName="expirationYear"
+                        type="number">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <mat-label>CVV</mat-label>
+                    <input matInput placeholder="Enter CVV" value="" formControlName="CVV"
+                        type="number">
+                </mat-form-field>
+            </div>
+            <div>
+                <button type="submit" mat-raised-button color="primary">Make payment</button>
+            </div>
+        </form>
+    </main>
+</div>

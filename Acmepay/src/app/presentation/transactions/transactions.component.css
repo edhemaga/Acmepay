@@ -1,0 +1,28 @@
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#container {
+  min-width: 70vw;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.alignTextCenter {
+  text-align: center;
+}
+
+#void {
+  color: #ff6868;
+}
+
+#capture {
+  color: #7dffc2;
+}
+
+#filterButton {
+  margin-left: 10px;
+}
